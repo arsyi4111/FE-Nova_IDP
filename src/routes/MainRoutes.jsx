@@ -27,6 +27,8 @@ const TalentDetail = Loadable(lazy(() => import('../views/pages/dashboard/talent
 const UserProfile = Loadable(lazy(() => import('../views/pages/user-profile/profile')));
 const UbahKataSandi = Loadable(lazy(() => import('../views/pages/user-profile/change-password')))
 
+const IndividualDevelopmentPlan = Loadable(lazy(() => import('../views/pages/individual-development-plan/event')));
+
 import { Navigate } from 'react-router-dom';
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -73,6 +75,15 @@ const MainRoutes = {
         {
           path: 'daftar-pengguna',
           element: <DaftarPengguna />
+        }
+      ]
+    },
+    {
+      path: 'individual-development-plan',
+      children: [
+        {
+          path: 'event',
+          element: <IndividualDevelopmentPlan />
         }
       ]
     },

@@ -4,13 +4,14 @@ import EventKomiteUnit from './event-komiteunit';
 import ManajemenPengguna from './manajemen-pengguna';
 import EventKaryawan from './event-karyawan';
 import EventKetuaKomiteTalent from './event-ketuakomitetalent';
+import EventIDP from './event-idp';
 
 const filterMenuItems = (role) => {
   switch (role) {
     case 'Super Admin':
-      return [dashboard, TalentIdentification, ManajemenPengguna, ManajemenPengguna];
+      return [dashboard, TalentIdentification, ManajemenPengguna, ManajemenPengguna, EventIDP];
     case 'Admin Talent':
-      return [dashboard, TalentIdentification];
+      return [dashboard, TalentIdentification, EventIDP];
     case 'Karyawan':
       return [EventKaryawan];
     case 'Komite Unit':
